@@ -1,4 +1,4 @@
-const jwt=require("jsonwebtoken");
+const jwt=require("./node_modules/jsonwebtoken");
 module.exports=(req,res,next)=>{
     try{
        // console.log(req.headers.authorization)

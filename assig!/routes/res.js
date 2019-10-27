@@ -1,8 +1,8 @@
 const express=require("express");
 const route=express.Router();
 
-const Restro=require("../models/data");
-const Auth=require("../Middleware/auth");
+const Restro=require("../models/resData");
+const Auth=require("../middleware/auth");
 
 
 
@@ -13,6 +13,7 @@ route.get("/",Auth,async(req,res)=>{
     try{
         const restroList=await Restro.find({});
         res.status(200).json({success:true,data:restroList})
+        
     }
     catch(e){
         res.status(404).send({success:false,msg:e})
